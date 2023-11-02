@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewPage">
+    <center>
+        <StackPane prefHeight="450" prefWidth="450" BorderPane.alignment="CENTER">
+            <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20; -fx-spacing: 15; -fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-border-width: 1; -fx-border-radius: 5;">
+                <HBox spacing="10" alignment="CENTER" prefHeight="62">
+                    <Label prefHeight="36.0"  text="输入目录名：" style="-fx-font-size: 14; -fx-text-fill: #333;"/>
+                    <TextField fx:id="textName" prefHeight="35" promptText="最多输入3个字母或数字" style="-fx-font-size: 14; -fx-pref-width: 200;"/>
+                </HBox>
+                <HBox spacing="10" prefHeight="58.0" alignment="CENTER">
+                    <Label prefHeight="34.0" text="文件类型名：" style="-fx-font-size: 14; -fx-text-fill: #333;"/>
+                    <TextField fx:id="textTypeName" prefHeight="34.0" promptText="最多输入2个字母或数字" disable="true" style="-fx-font-size: 14; -fx-pref-width: 200;"/>
+                </HBox>
+                <HBox spacing="10" alignment="CENTER">
+                    <Group fx:id="group">
+                        <RadioButton fx:id="dir" mnemonicParsing="false" prefHeight="46.0" selected="true" text="目录" style="-fx-font-size: 14; -fx-text-fill: #333;">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="group1"/>
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="file" layoutY="46.0" mnemonicParsing="false" prefHeight="46.0" text="普通文件" toggleGroup="$group1" disable="true" style="-fx-font-size: 14; -fx-text-fill: #333;"/>
+                        <RadioButton fx:id="readOnlyFile" layoutY="87.0" mnemonicParsing="false" prefHeight="55.0" text="只读文件" toggleGroup="$group1" disable="true" style="-fx-font-size: 14; -fx-text-fill: #333;"/>
+                    </Group>
+                </HBox>
+                <Button fx:id="submitButton" mnemonicParsing="false" prefHeight="41" prefWidth="288" text="确认" onAction="#catalogueAction" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" style="-fx-font-size: 16; -fx-background-color: #4caf50; -fx-text-fill: #fff;"/>
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="rootBorder" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainPage" style="-fx-background-color: #f0f0f0;">
+
+   <top>
+      <MenuBar fx:id="menuBar">
+         <Menu fx:id="goBack" style="-fx-font-size: 14;">
+            <graphic>
+               <Label fx:id="backLabel" text="返回上一级" />
+            </graphic>
+         </Menu>
+         <Menu fx:id="doNew" text="新建" style="-fx-font-size: 14;">
+            <MenuItem fx:id="createCatalogue" text="目录" style="-fx-font-size: 14;"/>
+            <MenuItem fx:id="createFile" text="文件" style="-fx-font-size: 14;"/>
+         </Menu>
+      </MenuBar>
+   </top>
+
+   <center>
+      <FlowPane fx:id="rootPane"  BorderPane.alignment="CENTER" style="-fx-padding: 20;">
+
+      </FlowPane>
+
+   </center>
+
+<!--   <left>-->
+<!--      <TreeView fx:id="treeView">-->
+
+<!--      </TreeView>-->
+<!--   </left>-->
+
+   <bottom>
+      <TableView fx:id="tableView" prefHeight="220"  style="-fx-background-color: #fff;">
+         <columns>
+            <TableColumn fx:id="col1" editable="false" prefWidth="700.0" sortable="false" text="文件路径" style="-fx-alignment: CENTER; -fx-font-size: 14;"/>
+            <TableColumn fx:id="col2" editable="false" prefWidth="300.0" sortable="false" text="打开方式" style="-fx-alignment: CENTER; -fx-font-size: 14; "/>
+         </columns>
+      </TableView>
+   </bottom>
+</BorderPane>
